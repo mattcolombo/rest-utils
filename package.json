@@ -21,5 +21,10 @@
   "bugs": {
     "url": "https://github.com/mattcolombo/rest-utils/issues"
   },
-  "homepage": "https://github.com/mattcolombo/rest-utils#readme"
+  "homepage": "https://github.com/mattcolombo/rest-utils#readme",
+  "dependencies": {
+    "console-stamp": "^3.0.4",
+    "express": "^4.17.3",
+    "http": "0.0.1-security"
+  }
 }
