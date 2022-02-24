@@ -1,0 +1,51 @@
+swagger: '2.0'
+info:
+  description: A sample RESTful API to use for testing of other tools during development
+  version: 0.1.0
+  title: rest-utils-server
+  # put the contact info for your development or API team
+  contact:
+    email: colombomattia89@gmail.com
+
+  license:
+    name: MIT
+    url: https://opensource.org/licenses/MIT
+
+# tags are used for organizing operations
+tags:
+#- name: admins
+#  description: Secured Admin-only calls
+- name: users
+  description: Operations available to all users
+
+paths:
+  /about:
+    get:
+      tags:
+      - users
+      summary: get information about the API
+      operationId: getInfo
+      description: |
+        Produces the information about the API, like name and version
+      produces:
+      - application/json
+      responses:
+        200:
+          description: information retrieved correctly
+          schema:
+            $ref: '#/definitions/ApiInfo'
+        500:
+          description: server error
+
+definitions:
+  ApiInfo:
+    required:
+      - name
+      - version 
+    properties:
+      name:
+        type: string
+        example: rest-utils-server
+      version:
+        type: string
+        example: 0.1.0

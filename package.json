@@ -1,0 +1,25 @@
+{
+  "name": "rest-utils-server",
+  "version": "0.1.0",
+  "description": "A sample RESTful API to use for testing of other tools during development",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mattcolombo/rest-utils.git"
+  },
+  "keywords": [
+    "RESTful",
+    "utilities",
+    "utils"
+  ],
+  "author": "Mattia Colombo <colombomattia89@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mattcolombo/rest-utils/issues"
+  },
+  "homepage": "https://github.com/mattcolombo/rest-utils#readme"
+}
