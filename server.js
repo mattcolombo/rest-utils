@@ -37,7 +37,7 @@ routes(app);
 // setting up the Swagger/OpenAPI documentation at `/developer/documentation` endpoint
 const swaggerUi = require('swagger-ui-express');
 const YAML = require('yamljs');
-const documentation = YAML.load('./restDoc.yml');
+const documentation = YAML.load('./restDoc.yaml');
 app.use('/developer/documentation', swaggerUi.serve, swaggerUi.setup(documentation));
 
 /**
