@@ -26,7 +26,7 @@ paths:
       summary: get information about the API
       operationId: getInfo
       description: |
-        Produces the information about the API, like name and version
+        Returns the information about the API as a JSON object
       produces:
       - application/json
       responses:
@@ -42,6 +42,9 @@ definitions:
     required:
       - name
       - version 
+      - author
+      - license
+      - description
     properties:
       name:
         type: string
@@ -49,3 +52,12 @@ definitions:
       version:
         type: string
         example: 0.1.0
+      author:
+        type: string
+        example: Name Surname <name.surname@email.com>
+      license:
+        type: string
+        Example: MIT
+      description:
+        type: string
+        example: Find here the description for the API
