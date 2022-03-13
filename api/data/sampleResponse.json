@@ -1,0 +1,26 @@
+{
+    "object.name": "sample-object",
+    "object": {
+        "property.1": "sample property 1",
+        "property.2": "sample property 2",
+        "multi.property": [
+            "property 3",
+            42,
+            "property 4"
+        ]
+    },
+    "next.object": [
+        {
+            "property.within.1a": "more properties",
+            "property.within.1b": 1
+        },
+        {
+            "property.within.2a": "and more",
+            "property.within.2b": 2
+        },
+        {
+            "property.within.3a": "and more again",
+            "property.within.3b": 3
+        }
+    ]
+}
