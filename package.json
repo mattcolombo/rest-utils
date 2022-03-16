@@ -1,6 +1,6 @@
 {
   "name": "rest-utils-server",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "A sample RESTful API to use for testing of other tools during development",
   "main": "server.js",
   "scripts": {
