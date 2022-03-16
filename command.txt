@@ -1,0 +1,1 @@
+docker run --rm -d -p 1010:1010 local/rest-utils:1.0.0
