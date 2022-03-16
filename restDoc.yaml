@@ -1,11 +1,11 @@
 swagger: '2.0'
 info:
   description: A sample RESTful API to use for testing of other tools during development
-  version: 0.1.0
-  title: rest-utils-server
+  version: 1.0.0
+  title: rest-utils
   # put the contact info for your development or API team
   contact:
-    email: colombomattia89@gmail.com
+    github: <github.com/mattcolombo>
 
   license:
     name: MIT
@@ -36,6 +36,79 @@ paths:
             $ref: '#/definitions/ApiInfo'
         500:
           description: server error
+  /sample/get/json:
+    get:
+      tags:
+      - users
+      summary: return sample JSON body
+      operationId: getJson
+      description: |
+        Returns a sample JSON object in the body
+      produces:
+      - application/json
+      responses:
+        200:
+          description: information retrieved correctly
+          schema:
+            $ref: '#/definitions/JsonBody'
+        500:
+          description: server error
+  /sample/get/code/success:
+    get:
+      tags:
+      - users
+      summary: returns a success code (no body)
+      operationId: getSuccess
+      description: |
+        Returns a success code (no body)
+      responses:
+        200:
+          description: OK
+  /sample/get/code/error:
+    get:
+      tags:
+      - users
+      summary: returns an error code (no body)
+      operationId: getError
+      description: |
+        Returns the information about the API as a JSON object
+      responses:
+        500:
+          description: Internal server error
+  /sample/post/json:
+    get:
+      tags:
+      - users
+      summary: return Json body received as input
+      operationId: postJson
+      description: |
+        Allows to POST a Json body and returns it back to the caller
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        200:
+          description: returns the body that was provided
+        500:
+          description: server error
+  sample/put/json:
+    get:
+      tags:
+      - users
+      summary: return Json body received as input
+      operationId: putJson
+      description: |
+        Allows to PUT a Json body and returns it back to the caller
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        200:
+          description: returns the body that was provided
+        500:
+          description: server error
 
 definitions:
   ApiInfo:
@@ -61,3 +134,29 @@ definitions:
       description:
         type: string
         example: Find here the description for the API
+  JsonBody:
+    required:
+      - name
+      - version 
+      - author
+      - license
+      - description
+    properties:
+      object.name:
+        type: string
+        example: sample-object
+      object:
+        type: object
+        properties: 
+          property.1:
+            type: string
+            example: sample property 1
+          property.2:
+            type: string
+            example: sample property 2
+          multi.property:
+            type: list
+            example: ["property 3", 42, "property 4"]
+      next.object:
+        type: list
+        example: [json object, json object, json object]
