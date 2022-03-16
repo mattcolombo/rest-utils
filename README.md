@@ -8,7 +8,7 @@ When using for the first time, run `npm install` to download all the dependencie
 
 ## Documentation
 
-To find all the options offered bny the API, please navigate in a browser to _localhost:1010/developer/documentation_. This will expose an interactive documentation page with all the information on the possibilities offered by the API.
+To find all the options offered by the API, please navigate in a browser to path _/developer/documentation_. This will expose an interactive documentation page with all the information on the possibilities offered by the API.
 
 ## Running the API in docker
 
